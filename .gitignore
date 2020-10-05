@@ -4,3 +4,4 @@ transfer_matrix.md
 transfer_matrix_method.py
 .ipynb_checkpoints/
 test.py
+.gitignore
