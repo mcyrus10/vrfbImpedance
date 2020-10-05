@@ -8,7 +8,8 @@ Written by Michael C. Daugherty for EESC Lab University of Tennessee
   * [Plotting](#plotting)
   * [Randles Circuit](#randles-circuit)
 
-###Modules
+Modules
+-------
 These are the python modules needed for the following tutorials:
   * [matplotlib](https://matplotlib.org/) : matplotlib.pyplot
   * [numpy](https://numpy.org/) : real,imag,pi,inf,array,concatenate,log
@@ -42,7 +43,8 @@ This code can be easily modified to fit different types of spectra if a circuit
 model is known or can be abstracted to fit 
 
 
-###Functions
+Functions
+---------
   - *Z* - Returns the real and imaginary impedance response for the above
     circuit
     - The ordered input arguments for this function are:
@@ -53,8 +55,7 @@ model is known or can be abstracted to fit
       resistance) (F)
       5) C2 - Capacitance 2 (connected in parallel with the finite diffusion
       resistance (F)
-      6) P - CPE exponent (-)
-      7) frequency - frequency to evaluate (Hz)
+      6) frequency - frequency to evaluate (Hz)
     - Example usage:
 ```python
 Rohmic  = 1
@@ -62,9 +63,8 @@ Rct     = 2
 Rfd     = 1
 C1      = 20e-6
 C2      = 10e-6
-P       = .93
 fre     = 100
-Z(Rohmic,Rct,Rfd,C1,C2,P,fre)
+Z(Rohmic,Rct,Rfd,C1,C2,fre)
 [Returns]
 (3.9955342404129186-0.035679897432746334j)
 ```
@@ -86,7 +86,7 @@ is 2x the length of the experimental data.
     - Example usage:
 ```python
 # continued from previous
-initialGuess = [Rohmic,Rct,Rfd,C1,C2,P]
+initialGuess = [Rohmic,Rct,Rfd,C1,C2]
 Zexperimental = array([0.0824 - 0.0117j,
                                 .       .
                                 .       .
